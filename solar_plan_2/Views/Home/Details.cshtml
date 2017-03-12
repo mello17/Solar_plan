@@ -1,0 +1,59 @@
+﻿@model solar_plan_2.Events
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Подробности</h2>
+
+<div>
+    <h4>Событие</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name_Event)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name_Event)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subscr_Event)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subscr_Event)
+        </dd>
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Start_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Start_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.End_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.End_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDeffered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDeffered)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("На главную страницу", "Index")
+</p>

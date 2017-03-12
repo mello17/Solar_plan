@@ -1,0 +1,41 @@
+﻿@model IEnumerable<solar_plan_2.Events>
+
+@{
+    ViewBag.Title = "Планировщик";
+}
+@using (Html.BeginForm())
+{
+    <div class="panel-footer">
+
+        <form>
+            <input type="button" value="Добавить новое событие" onclick="javascript:window.location='/Home/Added'" />
+        </form>
+    </div>
+}
+<h2>Список событий</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name_Event)
+        </th>
+      
+        <th></th>
+    </tr>
+   
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name_Event)
+        </td>
+       
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Подробно", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,66 @@
+﻿@model solar_plan_2.Events
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+
+<h3>Удаление события</h3>
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name_Event)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name_Event)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subscr_Event)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subscr_Event)
+        </dd>
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Start_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Start_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.End_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.End_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDeffered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDeffered)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> |
+            @Html.ActionLink("На главную страницу", "Index")
+        </div>
+    }
+</div>
